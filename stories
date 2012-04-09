@@ -1,0 +1,27 @@
+[DONE] STORY 1: 
+The api provides an abstraction of log rotation based set of files.
+The files can be identified with a root directory + regexp
+An iteration over log lines is provided.
+No structure for log lines is provided
+Log descriptor defines the format of the line.
+
+STORY 2:
+The user can access logging api in python through jython
+
+STORY 3:
+Structured log lines defined through JavaClasses, multiline loglines are considered
+Find and filter on single log group 
+Api to access the content of a log line
+The user can configure an index for a log group
+
+STORY 4:
+The user can create a group of related logs.
+The user can define define a relationship between indexes on log files in a log group
+This is part of log descriptor
+
+STORY 5:
+The log group includes caching for long log elements
+
+STORY 6:
+The user can perform filter, map, reduce 
+The user can perform a group by.
