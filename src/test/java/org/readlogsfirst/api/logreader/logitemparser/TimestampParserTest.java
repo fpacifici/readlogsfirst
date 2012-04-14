@@ -39,7 +39,7 @@ public class TimestampParserTest {
         SimpleDateFormat format = new SimpleDateFormat("MMM dd HH:mm:ss");
         
         String ret = format.format(d);
-        assertEquals(ret, "mar 30 00:27:06");
+        assertEquals(ret, "Mar 30 00:27:06");
     }
     
     /**
@@ -59,7 +59,7 @@ public class TimestampParserTest {
         SimpleDateFormat format = new SimpleDateFormat("MMM dd HH:mm:ss");
         
         String ret = format.format(d);
-        assertEquals(ret, "mar 30 00:27:06");
+        assertEquals(ret, "Mar 30 00:27:06");
     }
     
     /**

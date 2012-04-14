@@ -53,7 +53,7 @@ public class RegExpFileFilterTest {
         LogFileGroup filter1 = new RegExpFileFilter(base,true);
         List<File> ret = filter1.getFiles();
         
-        assertTrue(ret.size() > 4);
+        assertTrue(ret.size() >= 4);
         for (File f : ret){
             assertFalse(f.isDirectory());
         }

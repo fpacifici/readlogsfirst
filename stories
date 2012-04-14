@@ -5,7 +5,7 @@ An iteration over log lines is provided.
 No structure for log lines is provided
 Log descriptor defines the format of the line.
 
-STORY 2:
+[DONE]STORY 2:
 The user can access logging api in python through jython
 
 STORY 3:
