@@ -10,7 +10,7 @@ import java.util.Date;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import org.readlogsfirst.api.logreader.LogLine;
-import org.readlogsfirst.api.logreader.UnstructuredLogLine;
+import org.readlogsfirst.api.logreader.loglines.UnstructuredLogLine;
 
 /**
  * This parser generates unstructured log lines with a date as index.

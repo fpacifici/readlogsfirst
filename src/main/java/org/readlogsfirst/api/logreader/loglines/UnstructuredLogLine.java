@@ -2,7 +2,9 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package org.readlogsfirst.api.logreader;
+package org.readlogsfirst.api.logreader.loglines;
+
+import org.readlogsfirst.api.logreader.LogLine;
 
 /**
  * Represents an instance of a log line. This line is considered as a simple

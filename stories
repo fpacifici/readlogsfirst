@@ -9,7 +9,8 @@ Log descriptor defines the format of the line.
 The user can access logging api in python through jython
 
 STORY 3:
-Structured log lines defined through JavaClasses, multiline loglines are considered
+Structured log lines defined through Map, 
+multiline loglines are considered
 Find and filter on single log group 
 Api to access the content of a log line
 The user can configure an index for a log group

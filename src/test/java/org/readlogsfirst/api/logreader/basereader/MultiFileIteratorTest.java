@@ -17,11 +17,11 @@ import java.util.regex.Pattern;
 import org.junit.Test;
 import org.readlogsfirst.api.logreader.LogLine;
 import org.readlogsfirst.api.logreader.logitemparser.TimestampIndexParse;
+import org.readlogsfirst.api.logreader.loglines.UnstructuredLogLine;
 import org.readlogsfirst.api.logreader.logsplitter.SingleLineSplittingStrategy;
 import org.readlogsfirst.api.util.SystemOutLogger;
 
 import static org.junit.Assert.*;
-import org.readlogsfirst.api.logreader.UnstructuredLogLine;
 
 /**
  * Tests the multifile base iterator

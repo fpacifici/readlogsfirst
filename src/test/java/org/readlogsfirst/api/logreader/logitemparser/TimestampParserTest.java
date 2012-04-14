@@ -13,7 +13,8 @@ import java.util.regex.Pattern;
 import org.junit.Test;
 import org.readlogsfirst.api.logreader.LogLine;
 import static org.junit.Assert.*;
-import org.readlogsfirst.api.logreader.UnstructuredLogLine;
+
+import org.readlogsfirst.api.logreader.loglines.UnstructuredLogLine;
 
 /**
  * Perfors some parsing tests for timestamp parser
