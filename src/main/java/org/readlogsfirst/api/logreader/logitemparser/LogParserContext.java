@@ -66,6 +66,19 @@ public class LogParserContext<T extends Comparable<T>> implements LogItemParser{
 	}
 
 
+	/**
+	 * Main algorithm to parse a log item (where an item can be a set of lines in the file 
+	 * identifying a log event.
+	 * 
+	 * Parsing process goes through tokenizing the event. This generates a list of tokens.
+	 * Extracting the index. If an indexer is not provided, the first token is considered as 
+	 * index. For some logs a fixer can be used to rebuild badly formatted lines. If the fixer 
+	 * is not present, no fixing is performed. Once this is done, the builder creates the log
+	 * line to be returned starting from the tokens.
+	 * 
+	 * @param item is the multiline or single line log event as got from the file
+	 * @return the LogLine object. It is generic: the parameter is the type to be used as index.
+	 */
 	public LogLine<T> parseLine(String item) throws LogItemParsingException {
 		T index;
 		
