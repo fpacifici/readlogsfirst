@@ -33,7 +33,10 @@ public class RegExpTokenizer implements LineTokenizerStrategy {
 	}
 	
 	/**
+	 * {@inheritDoc}
+	 * Tokenizes the string according to the list of regular expressions given during initialization.
 	 * 
+	 * each expression is searched for and the result is added to the output.
 	 */
 	public List<?> tokenize(String line) throws LogItemParsingException {
 		List<String> out = new LinkedList<String>();
@@ -49,10 +52,11 @@ public class RegExpTokenizer implements LineTokenizerStrategy {
 			if (!found){
 				throw new LogItemParsingException(line, "Did not contain " + p.pattern());
 			}else {
-				int begin = m.regionStart();
-				int end = m.regionEnd();
+				int begin = m.start();
+				int end = m.end();
 				String token = line.substring(begin, end);
 				out.add(token);
+				position = end;
 			}
 		}
 		
