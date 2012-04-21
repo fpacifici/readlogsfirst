@@ -1,5 +1,6 @@
 package org.readlogsfirst.api.logreader.logitemparser.builders;
 
+import java.util.Arrays;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -21,7 +22,7 @@ import org.readlogsfirst.api.logreader.loglines.MapLogLine;
  */
 public class MapLineBuilder implements ContentBuildingStrategy<Date> {
 
-	private static List<String> keys;
+	private List<String> keys;
 	
 	/**
 	 * Builds the builder with the list of keys.
@@ -29,6 +30,10 @@ public class MapLineBuilder implements ContentBuildingStrategy<Date> {
 	 */
 	public MapLineBuilder(List<String> keys){
 		this.keys = keys;
+	}
+	
+	public MapLineBuilder(String keys[]){
+		this.keys = Arrays.asList(keys);
 	}
 	
 	/**

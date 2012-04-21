@@ -1,5 +1,6 @@
 package org.readlogsfirst.api.logreader.logitemparser.tokenizers;
 
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
@@ -30,6 +31,14 @@ public class RegExpTokenizer implements LineTokenizerStrategy {
 		for (String s : sregexps){
 			regexps.add(Pattern.compile(s));
 		}
+	}
+	
+	/**
+	 * Easier way to pass the regular expressions
+	 * @param sregexp
+	 */
+	public RegExpTokenizer(String[] sregexp){
+		this(Arrays.asList(sregexp));
 	}
 	
 	/**

@@ -17,9 +17,10 @@ public interface LineSplittingStrategy {
      * Defines the result of a line consumption.
      * CONSUMING means that the log item is not complete (for multiline items)
      * CONSUMED means that log item is complete and nothing is buffered
-     * BUFFERED means that the log item is recognized as complete since the beginning
+     * BUFFERED means that the log item is recognized as complete since the beginning 
      * of the following one has been found. The first line of the next item 
      * is kept in the buffer.
+     * EMPTY means there is nothing in the buffer
      */
     enum ConsumptionStatus {EMPTY,CONSUMING,CONSUMED,BUFFERED};
     

@@ -129,7 +129,13 @@ public class MultiFileIterator implements Iterator<LogLine> {
                         current = listPointer.next();
                         return readLine();
                     } else {
-                        return null;
+                        //end of file. tries to purge the buffer
+                    	if (lineSplitting.getCurrentStatus() != LineSplittingStrategy.ConsumptionStatus.EMPTY){
+                    		String fLine = lineSplitting.getConsumed();
+                    		return itemParser.parseLine(fLine);
+                    	}else {
+                    		return null;
+                    	}
                     }
                 } else {
                     lineSplitting.consumeLine(fullLine);
