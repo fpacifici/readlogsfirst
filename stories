@@ -12,7 +12,7 @@ STORY 3:
 *Structured log lines defined through Map, 
 *multiline loglines are considered
 *Api to access the content of a log line
-Programmatically configure a logger
+*Programmatically configure a logger
 
 STORY 3b:
 Base user interface.
