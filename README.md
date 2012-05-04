@@ -18,11 +18,11 @@ Up to now roughly half of the API is developed. Querying capabilities are still 
 
 UI (based on Netbeans platform) is in early development stages
 
-You can find here the [JavaDoc](http://github.com/fpacifici/readlogsfirst/javadoc/)
+You can find here the [JavaDoc](http://fpacifici.github.com/readlogsfirst/javadoc/)
 
 Downloads
 =========
 
 Here you can find the API in the current version:
 
-[readLogsFirst-0.1-SNAPSHOT.jar](/downloads/fpacifici/readLogsFirst-0.1-SNAPSHOT.jar)
+[readLogsFirst-0.1-SNAPSHOT.jar](http://fpacifici.github.com/readlogsfirst/releases/readLogsFirst-0.1-SNAPSHOT.jar)
