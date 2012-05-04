@@ -1,0 +1,11 @@
+org.readlogsfirst.api.descriptors
+org.readlogsfirst.api.logreader
+org.readlogsfirst.api.logreader.basereader
+org.readlogsfirst.api.logreader.logitemparser
+org.readlogsfirst.api.logreader.logitemparser.builders
+org.readlogsfirst.api.logreader.logitemparser.indexFinders
+org.readlogsfirst.api.logreader.logitemparser.tokenizers
+org.readlogsfirst.api.logreader.loglines
+org.readlogsfirst.api.logreader.logsplitter
+org.readlogsfirst.api.query
+org.readlogsfirst.api.util
