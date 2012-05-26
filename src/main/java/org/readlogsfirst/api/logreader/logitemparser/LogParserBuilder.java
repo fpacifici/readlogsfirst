@@ -45,11 +45,18 @@ public class LogParserBuilder<T extends Comparable<T>> {
 	private LineFixerStrategy fixer;	
 	private ContentBuildingStrategy<?> outputBuilder;
 	
+        private boolean complex = false;
+        
+        public LogParserBuilder() {
+            //setting defaults
+            tokenizer = new SimpleSplitTokenizer(" ");
+        }
+        
 	//Simple parser
 	private LogItemParser parser;
 	
 	public LogParserBuilder<T> unstructuredTimestamp(int dateStart, int dateEnd, String dateFormat){
-		if (tokenizer != null || finder != null || fixer != null || outputBuilder != null || parser != null){
+		if (complex || parser != null){
 			throw new IllegalStateException("Parser has already been prepared");
 		}
 		parser = new TimestampIndexParse(dateStart, dateEnd, dateFormat);
@@ -57,7 +64,7 @@ public class LogParserBuilder<T extends Comparable<T>> {
 	}
 	
 	public LogParserBuilder<T> unstructuredTimestamp(Pattern dateRegExp, String dateFormat){
-		if (tokenizer != null || finder != null || fixer != null || outputBuilder != null || parser != null){
+		if (complex || parser != null){
 			throw new IllegalStateException("Parser has already been prepared");
 		}
 		parser = new TimestampIndexParse(dateRegExp, dateFormat);
@@ -67,7 +74,7 @@ public class LogParserBuilder<T extends Comparable<T>> {
 	//strategy based parser
 	//tokenizers
 	private void checkTokenizerPresent() {
-		if (tokenizer != null || parser != null){
+		if ( parser != null){
 			throw new IllegalStateException("Cannot set tokenizer since already set.");
 		}
 	}

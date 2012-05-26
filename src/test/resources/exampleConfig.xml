@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<logDescriptors>
+	<logDescriptor name="systemLog">
+		<splitter>
+			<singlelinesplitter/>
+		</splitter>
+		<parser>
+			<timestampIndex posStart="0" posEnd="15" format="MMM dd HH:mm:ss"/>
+		</parser>
+	</logDescriptor>
+	<logDescriptor name="weblogicLog">
+		<splitter>
+			<multilinesplitter prefix="####"/>
+		</splitter>
+		<parser>
+			<complex>
+				<simplesplittokenizer start="&lt;" stop="&gt;" />
+				<dateindexfinder pattern="MMM dd, yyyy hh:mm:ss a z" position="0" />
+				<maplinebuilder>
+					<key>timestamp</key>
+					<key>level</key>
+					<key>origin</key>
+					<key>host</key>
+					<key>servername</key>
+					<key>thread</key>
+					<key>component</key>
+					<key>empty1</key>
+					<key>empty2</key>
+					<key>code</key>
+					<key>messagecode</key>
+					<key>message</key>
+				</maplinebuilder>
+			</complex>
+		</parser>
+	</logDescriptor>
+</logDescriptors>

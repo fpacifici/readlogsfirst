@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<logDescriptors>
+	<logDescriptor name="systemLog">
+		<splitter>
+			<singlelinesplitter/>
+		</splitter>
+		<parser>
+			<timestampIndex posStart="0" posEnd="15" format="MMM dd HH:mm:ss"/>
+		</parser>
+	</logDescriptor>
+</logDescriptors>
